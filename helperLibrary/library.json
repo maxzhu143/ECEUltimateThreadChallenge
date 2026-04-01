@@ -1,0 +1,26 @@
+{
+  "name":"ECEUltimateThreadChallenge",
+  "description":"ESP32 and ESP8266 Spotify API Wrapper",
+  "keywords":"Spotify,Music,Arduino",
+  "authors":
+  {
+    "name": "Max Zhu <maxzhu143@gmail.com>",
+    "maintainer": true
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/maxzhu143/ECEUltimateThreadChallenge"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "dependencies": [
+    {
+      "name": "bblanchon/ArduinoJson"
+    }
+  ],
+  "build": {
+  }
+}
