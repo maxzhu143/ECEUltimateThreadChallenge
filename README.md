@@ -22,7 +22,7 @@ The goal of this project was to design, build, and program a fun embedded system
    - Jumper Wires
    - Breadboard(optional can hand solder everything)
 
-   ![Layout of Components](images/components.jpeg)
+   <img src="images/components.jpeg" alt="Layout of Components" width="50%">
 
 2. **Wiring**
    - Connect power (3.3V / GND) correctly
