@@ -7,7 +7,7 @@
 
 This project is part of the **ECE Embedded Devices Thread Challenge**, focusing on hands-on embedded systems development using microcontrollers, sensors, and real-time interaction.
 
-The goal of this project is to design, build, and program an embedded system that integrates hardware and software to perform meaningful tasks. This includes working with peripherals, handling input/output, and implementing efficient firmware.
+The goal of this project was to design, build, and program a fun embedded system that integrates hardware and software to perform meaningful tasks. The final project was a fun ESP-32 based desk toy that displays the live feedback from Spotify, allows Spotify control, and current weather and time. This project offers a blend of assembling physical compoenents and calling pre-existing open-source APIs.
 
 ---
 
@@ -16,12 +16,13 @@ The goal of this project is to design, build, and program an embedded system tha
 ### 🔧 Physical Build
 
 1. **Components Needed**
-   - ESP32 (e.g., ESP32-2432S028 or similar)
-   - Breadboard & jumper wires
-   - Potentiometer
-   - Buttons / switches
-   - Sensors (e.g., IMU, capacitive touch, etc.)
-   - Display (optional)
+   - CYD has built in(ESP32-2432S028)
+   - Buttons(any work)
+   - Potentiometer(10kohm)
+   - Jumper Wires
+   - Breadboard(optional can hand solder everything)
+
+   ![Layout of Components](images/components.jpeg)
 
 2. **Wiring**
    - Connect power (3.3V / GND) correctly
