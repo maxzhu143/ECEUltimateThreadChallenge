@@ -12,6 +12,7 @@ The goal of this project was to design, build, and program a fun embedded system
 ---
 
 ## ⚙️ Setting Up the Project
+22 27 34
 
 ### 🔧 Physical Build
 
@@ -20,20 +21,26 @@ The goal of this project was to design, build, and program a fun embedded system
    - Buttons(any work)
    - Potentiometer(10kohm)
    - Jumper Wires
+   - Soldering Iron
+   - Solder
+   - Eye Protection
    - Breadboard(optional can hand solder everything)
 
-   <img src="images/components.jpeg" alt="Layout of Components" width="50%">
+   <img src="images/components.png" alt="Layout of Components" width="50%">
 
 2. **Wiring**
-   - Connect power (3.3V / GND) correctly
-   - Connect input devices (buttons, potentiometer) to GPIO pins
-   - Connect sensors via I2C or SPI as required
-   - Ensure common ground across all components
+If you are planning on changing the wiring, be sure to reference the chip pins and also update the SpotifyDisplay.ino(change the DEFINE pins)
+
+   - Begin with testing your components. Plugging your CYD in and flashing something to the serial monitor, testing potentiometer, and buttons. Once everything has been verified, flip the CYD over.
+   <img src="images/CYDBack.png" alt="Layout of Components" width="50%">
+   - Once everything has been verified, we can start soldering. The first connection we are going to make is to pin 6 or GPIO 34 and connecting the JST connector that came with our kit to CN1 as show. It's always helpful to have a photo of the chip's datasheet on hand like the one below. Our pinout is on page 8.
+   https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf 
+   <img src="images/connection1.png" alt="Layout of Components" width="50%">
+   - 
 
 3. **Notes**
    - Double-check pin mappings before powering
    - Avoid using restricted GPIO pins on ESP32
-   - Use pull-up or pull-down resistors where necessary
 
 ---
 
