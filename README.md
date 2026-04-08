@@ -32,11 +32,18 @@ The goal of this project was to design, build, and program a fun embedded system
 If you are planning on changing the wiring, be sure to reference the chip pins and also update the SpotifyDisplay.ino(change the DEFINE pins)
 
    - Begin with testing your components. Plugging your CYD in and flashing something to the serial monitor, testing potentiometer, and buttons. Once everything has been verified, flip the CYD over.\
-   <img src="images/cydBack.png" alt="CYD" width="50%">\
+   <img src="images/cydBack.png" alt="CYD" width="50%">
    - Once everything has been verified, we can start soldering. The first connection we are going to make is to pin 6 or GPIO 34 and connecting the JST connector that came with our kit to CN1 as show. It's always helpful to have a photo of the chip's datasheet on hand like the one below. Our pinout is on page 8.\
    https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf 
-   <img src="images/connection1.png" alt="First Connection" width="50%">\
-   - 
+   <img src="images/connection1.png" alt="First Connection" width="50%">
+   - Now take two male to male jumper wires and connect the 3.3v to the red power rail and the GND to the black power rail. These should be red and black respectively but be sure to double check and follow where the wires are connected. For visual purposes I have chosen jumper wires that correlate to the same ports that leave the JST connector. *you can choose to skip this step and instead wire everything together*\
+   <img src="images/breadboard.png" alt="Power and Ground" width="50%">
+   - Once power has been established we can begin wiring the components.
+      - One button should be connected to the yellow wire(GPIO22) and ground, this will change modes and be a reset button
+      - Another button should be connected to the blue wire(GPIO27) and ground, this will be the play/pause button
+      - The potentiometer should have pin1 connected to 3.3v, pin2 connected to our earlier soldered wire, and pin3 connected to ground. A pinout of your potentiometer can be found online. The control signal should be connected to our soldered wire.
+   <img src="images/completedConnections.png" alt="EverythingWired" width="50%">
+
 
 3. **Notes**
    - Double-check pin mappings before powering
