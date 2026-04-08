@@ -28,25 +28,41 @@ The goal of this project was to design, build, and program a fun embedded system
 
    <img src="images/components.png" alt="Layout of Components" width="50%">
 
-2. **Wiring**
-If you are planning on changing the wiring, be sure to reference the chip pins and also update the SpotifyDisplay.ino(change the DEFINE pins)
+## 2. Wiring
 
-   - Begin with testing your components. Plugging your CYD in and flashing something to the serial monitor, testing potentiometer, and buttons. Once everything has been verified, flip the CYD over.
-   <img src="images/cydBack.png" alt="CYD" width="50%">
-   <br> 
-   - Once everything has been verified, we can start soldering. The first connection we are going to make is to pin 6 or GPIO 34 and connecting the JST connector that came with our kit to CN1 as show. It's always helpful to have a photo of the chip's datasheet on hand like the one below. Our pinout is on page 8.
-   <br> 
-   https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf 
-   <img src="images/connection1.png" alt="First Connection" width="50%">
-   - Now take two male to male jumper wires and connect the 3.3v to the red power rail and the GND to the black power rail. These should be red and black respectively but be sure to double check and follow where the wires are connected. For visual purposes I have chosen jumper wires that correlate to the same ports that leave the JST connector. *you can choose to skip this step and instead wire everything together*
-   <br> 
-   <img src="images/breadboard.png" alt="Power and Ground" width="50%">
-   - Once power has been established we can begin wiring the components.
-      - One button should be connected to the yellow wire(GPIO22) and ground, this will change modes and be a reset button
-      - Another button should be connected to the blue wire(GPIO27) and ground, this will be the play/pause button
-      - The potentiometer should have pin1 connected to 3.3v, pin2 connected to our earlier soldered wire, and pin3 connected to ground. A pinout of your potentiometer can be found online. The control signal should be connected to our soldered wire.
-   <img src="images/completedConnections.png" alt="EverythingWired" width="50%">
-   <br> 
+> **Note:** If you are planning on changing the wiring, be sure to reference the chip pins and update the `SpotifyDisplay.ino` file (specifically the `#define` pins).
+
+### Testing and Preparation
+* **Component Testing:** Begin by testing your components. Plug in your CYD and flash a test script to the serial monitor to verify the potentiometer and buttons. 
+* **Verification:** Once everything has been verified, flip the CYD over.
+
+<img src="images/cydBack.png" alt="CYD" width="50%">
+
+### Soldering the Connections
+* **First Connection:** Connect the JST connector that came with your kit to **CN1** and pin 6 (**GPIO 34**) as shown below. 
+* **Reference:** It is helpful to have the chip's datasheet handy. You can find the pinout on page 8 of the [ESP32-WROOM-32 Datasheet](https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf).
+
+<img src="images/connection1.png" alt="First Connection" width="50%">
+
+### Power and Ground
+* Take two male-to-male jumper wires and connect:
+    * **3.3V** to the **red** power rail.
+    * **GND** to the **black** power rail.
+* **Note:** Use red and black wires respectively to stay organized, but always double-check the connection points. (You may skip the breadboard and wire directly if preferred).
+
+<img src="images/breadboard.png" alt="Power and Ground" width="50%">
+
+### Component Wiring
+Once power is established, connect the following:
+
+* **Mode/Reset Button:** Connect to the yellow wire (**GPIO 22**) and Ground.
+* **Play/Pause Button:** Connect to the blue wire (**GPIO 27**) and Ground.
+* **Potentiometer:**
+    * **Pin 1:** Connect to 3.3V.
+    * **Pin 2 (Control Signal):** Connect to the wire soldered in the previous step.
+    * **Pin 3:** Connect to Ground.
+
+<img src="images/completedConnections.png" alt="EverythingWired" width="50%">
 
 3. **Notes**
    - Double-check pin mappings before powering
